@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif; /* matches the reference screenshot */
+  color: #000;
+  background: #fff;
+}
+
+.app {
+  padding: 16px 20px 40px;
+}
+
+.app__title {
+  text-align: center;
+  margin: 8px 0 28px;
+  font-size: 2em;
+}
+
+.gallery {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.photo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.photo__img {
+  display: block;
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  background: #eee; /* placeholder while the image loads */
+}
+
+.photo__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.like {
+  border: none;
+  background: none;
+  padding: 2px;
+  cursor: pointer;
+  color: #0b6bf0;
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.1s ease;
+}
+
+.like:hover {
+  transform: scale(1.15);
+}
+
+.like:active {
+  transform: scale(0.9);
+}
+
+.like:focus-visible {
+  outline: 2px solid #0b6bf0;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.like__count {
+  min-width: 1ch;
+  font-size: 14px;
+}
+
+.sentinel {
+  height: 1px;
+}
+
+.status {
+  text-align: center;
+  color: #444;
+}
+
+.status--error {
+  color: #b00020;
+}
+
+@media (max-width: 480px) {
+  .photo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .photo__img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.notice {
+  margin: 0 0 20px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #7a5b00;
+  background: #fff6d6;
+  border: 1px solid #f0dc90;
+  border-radius: 4px;
+}
